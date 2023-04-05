@@ -1,0 +1,665 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="page-wrapper">
+ 	
+    <!-- LOADING AREA START ===== -->
+	<div class="loading-area">
+		<div class="loading-box"></div>
+		<div class="loading-pic">
+			<div class="cssload-loader">Loading</div>
+		</div>
+	</div>
+	<!-- LOADING AREA  END ====== -->
+ 	
+    {% include 'includes/navbar.html' %}
+	
+	<!-- Banner Section -->
+    <section class="banner-section">
+		<div class="pattern-layer-one" style="background-image: url({% static 'images/main-slider/pattern-1.png' %})"></div>
+		<div class="main-slider-carousel owl-carousel owl-theme">
+            
+			<div class="slide" style="background-image: url({% static 'images/main-slider/1.jpg' %})">
+				<div class="auto-container">
+					
+					<div class="content-boxed">
+						<div class="inner-box">
+							<h1>Do you dare ? 
+								To dream Big!
+								
+								<br> We will guide you.</h1>
+							<div class="btns-box">
+								<a href="tel:+919745926142" class="theme-btn btn-style-one"><span class="txt">Free Consultation <i class="fa fa-angle-right"></i></span></a>
+							</div>
+						</div>
+					</div>
+						
+				</div>
+			</div>
+			
+			<div class="slide" style="background-image: url({% static 'images/main-slider/1.jpg' %})">
+				<div class="auto-container">
+					
+					<div class="content-boxed">
+						<div class="inner-box">
+							<h1>Cloud Way | A Milestone to Mount! <br></h1>
+							<div class="btns-box">
+								<a href="tel:+919745926142" class="theme-btn btn-style-one"><span class="txt">Free Consultation</span></a>
+							</div>
+						</div>
+					</div>
+						
+				</div>
+			</div>
+			
+			<div class="slide" style="background-image: url({% static 'images/main-slider/spotlight.jpg' %})">
+				<div class="auto-container">
+					
+					<div class="content-boxed">
+						<div class="inner-box">
+							<h1>Cloud Way <br> Your Gateway to Studying Abroad</h1>
+							<div class="btns-box">
+								<a href="tel:+919745926142" class="theme-btn btn-style-one"><span class="txt">Free Consultation</span></a>
+							</div>
+						</div>
+					</div>
+						
+				</div>
+			</div>
+			
+		</div>
+		
+	</section>
+	<!--End Banner Section-->
+	
+	<!-- Clients Section -->
+	<!-- <section class="clients-section">
+		<div class="auto-container">
+			<div class="inner-container margin-top">
+				<div class="clearfix">
+					<div class="client-column col-lg-3 col-md-6 col-sm-12">
+						<div class="image">
+							<a href="index-2.html#"><img src="images/clients/1.png" alt="" /></a>
+						</div>
+					</div>
+					<div class="client-column col-lg-3 col-md-6 col-sm-12">
+						<div class="image">
+							<a href="index-2.html#"><img src="images/clients/2.png" alt="" /></a>
+						</div>
+					</div>
+					<div class="client-column col-lg-3 col-md-6 col-sm-12">
+						<div class="image">
+							<a href="index-2.html#"><img src="images/clients/3.png" alt="" /></a>
+						</div>
+					</div>
+					<div class="client-column col-lg-3 col-md-6 col-sm-12">
+						<div class="image">
+							<a href="index-2.html#"><img src="images/clients/4.png" alt="" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+	<!-- End Clients Section -->
+	
+	<!-- Company Section Two -->
+	<section class="company-section-two">
+		<div class="pattern-layer-one" style="background-image: url({% static 'images/icons/pattern-1.png' %})"></div>
+		<div class="auto-container">
+			<div class="row clearfix">
+			
+				<!-- Content Column -->
+				<div class="content-column col-lg-6 col-md-12 col-sm-12">
+					<div class="inner-column">
+						<div class="sec-title">
+							<div class="title">About Us</div>
+							<h2>Cloud Way!<br> Navigating Study Abroad!</h2>
+							<div class="text">At Cloud Way, we are dedicated to helping students achieve their dreams of studying abroad. We understand that the process of studying in a foreign country can be overwhelming, which is why we offer expert guidance and support throughout the entire journey.</div>
+							<div class="text">Our team of experienced consultants is passionate about education and has in-depth knowledge of the different education systems around the world. We work with students to understand their academic goals and help them choose the right course and institution that matches their interests and qualifications.</div>
+							<div class="text">At Cloud Way, we believe in providing personalized attention to each of our clients. We strive to make the application process hassle-free, so that students can focus on their studies and achieve their career aspirations. Our mission is to be the trusted partner for students seeking to study abroad, and to help them make informed decisions that will shape their future.</div>
+						
+						</div>
+						<a href="about.html" class="theme-btn btn-style-two"><span class="txt">Learn More</span></a>
+					</div>
+				</div>
+				
+				<!-- Image Column -->
+				<div class="image-column col-lg-6 col-md-12 col-sm-12">
+					<div class="inner-column">
+						<div class="pattern-layer-two" style="background-image: url({% static 'images/icons/pattern-5.png' %})"></div>
+						<div class="row clearfix">
+							<!-- Column -->
+							<div class="column col-lg-7 col-md-6 col-sm-12">
+								<div class="image" data-tilt data-tilt-max="3">
+									<img src="{% static 'images/resource/Studentvisa.jpg' %}" alt="" />
+								</div>
+								<div class="image" data-tilt data-tilt-max="3">
+									<img src="{% static 'images/main-slider/spotlight.jpg' %}" alt="" />
+								</div>
+							</div>
+							
+							<!-- Column -->
+							<div class="column col-lg-5 col-md-6 col-sm-12">
+								<div class="image" data-tilt data-tilt-max="3">
+									<img src="{% static 'images/resource/study abroad.jpg' %}" alt="" />
+								</div>
+								<div class="image" data-tilt data-tilt-max="3">
+									<img src="{% static 'images/resource/pic.jpg' %}" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- End Company Section -->
+	
+	<!-- Services Section Two -->
+	<section class="services-section-two">
+		<div class="pattern-layer-one" style="background-image: url({% static 'images/background/pattern-1.png' %})"></div>
+		<div class="auto-container">
+			<div class="sec-title light centered">
+				<div class="title">Top Destinations</div>
+				<h2>Our Servicing Countries</h2>
+			</div>
+			<div class="inner-container">
+				<div class="pattern-layer-two" style="background-image: url({% static 'images/icons/pattern-6.png' %})"></div>
+				<div class="four-item-carousel owl-carousel owl-theme">
+					
+					<!-- Service Block Two -->
+					{% for i in servicing_countries %}
+						<div class="{% cycle 'service-block-two' 'service-block-two style-two' %}">
+							<div class="inner-box">
+								<div class="icon-box">
+									<span class=""><img src="{{i.image.url}}" alt=""></span>
+								</div>
+								<h4><a href="{% url 'service_details' i.id %}">{{i.title}}</a></h4>
+								<div class="text">{{i.content}}</div>
+							</div>
+						</div>
+					{% endfor %}
+					{% comment %} <div class="service-block-two">
+						<div class="inner-box">
+							<div class="icon-box">
+								<span class=""><img src="{% static './images/contries/italy.png' %}" alt=""></span>
+							</div>
+							<h4><a href="service-detail.html">Study in italy</a></h4>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered</div>
+						</div>
+					</div>
+					
+					<!-- Service Block Two -->
+					<div class="service-block-two style-two">
+						<div class="inner-box">
+							<div class="icon-box">
+								<span class=""><img src="{% static './images/contries/australia.png' %}" alt=""></span>
+							</div>
+							<h4><a href="service-detail.html">Study in Lundon</a></h4>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered</div>
+						</div>
+					</div>
+					
+					<!-- Service Block Two -->
+					<div class="service-block-two style-three">
+						<div class="inner-box">
+							<div class="icon-box">
+								<span class=""><img src="{% static './images/contries/india.png' %}" alt=""></span>
+							</div>
+							<h4><a href="service-detail.html">Study in Indian Universities</a></h4>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered</div>
+						</div>
+					</div>
+					
+					<!-- Service Block Two -->
+					<div class="service-block-two style-four">
+						<div class="inner-box">
+							<div class="icon-box">
+								<span class=""><img src="{% static './images/contries/canda.png' %}" alt=""></span>
+							</div>
+							<h4><a href="service-detail.html">Study in Canada</a></h4>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered</div>
+						</div>
+					</div>
+					
+					<!-- Service Block Two -->
+					<div class="service-block-two">
+						<div class="inner-box">
+							<div class="icon-box">
+								<span class=""><img src="{% static './images/contries/franch.png' %}" alt=""></span>
+							</div>
+							<h4><a href="service-detail.html">Study in France</a></h4>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered</div>
+						</div>
+					</div>
+					
+					<!-- Service Block Two -->
+					<div class="service-block-two style-two">
+						<div class="inner-box">
+							<div class="icon-box">
+								<span class=""><img src="{% static './images/contries/span.png' %}" alt=""></span>
+							</div>
+							<h4><a href="service-detail.html">Study in Spain</a></h4>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered</div>
+						</div>
+					</div>
+					
+					<!-- Service Block Two -->
+					<div class="service-block-two style-three">
+						<div class="inner-box">
+							<div class="icon-box">
+								<span class=""><img src="{% static './images/contries/swideen.png' %}" alt=""></span>
+							</div>
+							<h4><a href="service-detail.html">Study in swideen</a></h4>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered</div>
+						</div>
+					</div>
+					
+					<!-- Service Block Two -->
+					<div class="service-block-two style-four">
+						<div class="inner-box">
+							<div class="icon-box">
+								<span class=""><img src="{% static './images/contries/usa.png' %}" alt=""></span>
+							</div>
+							<h4><a href="service-detail.html">Study in America</a></h4>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered</div>
+						</div>
+					</div> {% endcomment %}
+					
+				</div>
+				
+			</div>
+			
+			<!-- Button Box -->
+			<div class="button-box text-center">
+				<a href="tel:+919745926142" class="theme-btn btn-style-two"><span class="txt">Free Consultation</span></a>
+			</div>
+			
+		</div>
+	</section>
+	<!-- End Services Section Two -->
+	
+	<!-- Process Section Two -->
+	<section class="process-section-two">
+		<div class="auto-container">
+			<div class="sec-title centered">
+				<div class="title">Work Process</div>
+				<h2>How our system works</h2>
+				<div class="text">At Cloud Way, we have a well-defined process to ensure that our clients receive the best possible guidance and support for their study abroad journey.  <br> Here's how our system works:</div>
+			</div>
+			<div class="inner-container">
+				<div class="pattern-layer-one" style="background-image: url({% static 'images/icons/pattern-5.png' %})"></div>
+				<div class="row clearfix">
+					
+					<!-- Process Block Two -->
+					<div class="process-block-two col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="icon"><img src="{% static 'images/icons/consulting1.png' %}" alt="" style="width: 20%;" /></div>
+							<h4>Course and Institution Selection</h4>
+							<div class="text">Based on your preferences, we provide you with a list of courses and institutions that match your interests and qualifications. We help you to compare the options and choose the best fit for you.</div>
+						</div>
+					</div>
+					
+					<!-- Process Block Two -->
+					<div class="process-block-two col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="icon"><img src="{% static 'images/icons/consulting1.png' %}" alt="" style="width: 20%;" /></div>
+							<h4>Application Process</h4>
+							<div class="text">Once you have decided on the course and institution, we assist you with the application process. We help you to fill out the forms, gather the necessary documents, and submit the application.</div>
+						</div>
+					</div>
+					
+					<!-- Process Block Two -->
+					<div class="process-block-two col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="icon"><img src="images/icons/consulting1.png" alt="" style="width: 20%;" /></div>
+							<h4>Visa and Immigration</h4>
+							<div class="text">We provide guidance and support with the visa and immigration process. We help you to understand the requirements and assist you with the paperwork.</div>
+						</div>
+					</div>
+					
+					<!-- Process Block Two -->
+					<div class="process-block-two col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="icon"><img src="{% static 'images/icons/consulting1.png' %}" alt="" style="width: 20%;" /></div>
+							<h4>Pre-Departure Briefing</h4>
+							<div class="text">Before you leave for your study destination, we provide you with a pre-departure briefing. This includes information on the culture, lifestyle, and academic environment of the country you will be studying in.</div>
+						</div>
+					</div>
+					
+					<!-- Process Block Two -->
+					<div class="process-block-two col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="icon"><img src="{% static 'images/icons/consulting1.png' %}" alt="" style="width: 20%;" /></div>
+							<h4>Ongoing Support</h4>
+							<div class="text">We provide ongoing support to our clients even after they have arrived at their study destination. We are always available to answer any questions or concerns you may have.</div>
+						</div>
+					</div>
+
+					<div class="process-block-two col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="icon"><img src="{% static 'images/icons/consulting1.png' %}" alt="" style="width: 20%;" /></div>
+							<h4>Ongoing Support</h4>
+							<div class="text">We provide ongoing support to our clients even after they have arrived at their study destination. We are always available to answer any questions or concerns you may have.</div>
+						</div>
+					</div>
+
+					<!-- <div class="process-block-two col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="icon"><img src="images/icons/consulting1.png" alt="" style="width: 20%;" /></div>
+							<h4>Research</h4>
+							<div class="text">Replenish him third creature and of a meat blessed void a fruit gathered you’re. Lorem Ipsum is simply</div>
+						</div>
+					</div> -->
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Process Section -->
+	
+	<!-- News Section Two -->
+	<!-- <section class="news-section-two">
+		<div class="auto-container">
+			<div class="sec-title centered">
+				<div class="title">News & Blog</div>
+				<h2>Read our latest posts</h2>
+			</div>
+			<div class="inner-container">
+				<div class="pattern-layer-one" style="background-image: url(images/icons/pattern-5.png)"></div>
+				<div class="row clearfix">
+					
+					<div class="news-block-two col-lg-6 col-md-12 col-sm-12">
+						<div class="inner-box">
+							<div class="image">
+								<a href="blog-detail.html"><img src="images/resource/news-4.jpg" alt="" /></a>
+							</div>
+							<h3><a href="blog-detail.html">You do to maintain technical</a></h3>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered.</div>
+							<a href="blog-detail.html" class="read-more">Read More</a>
+						</div>
+					</div>
+					
+					<div class="news-block-two col-lg-6 col-md-12 col-sm-12">
+						<div class="inner-box">
+							<div class="image">
+								<a href="blog-detail.html"><img src="images/resource/news-5.jpg" alt="" /></a>
+							</div>
+							<h3><a href="blog-detail.html">Website content update & speed optimization.</a></h3>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered.</div>
+							<a href="blog-detail.html" class="read-more">Read More</a>
+						</div>
+					</div>
+					
+					<div class="news-block-two col-lg-6 col-md-12 col-sm-12">
+						<div class="inner-box">
+							<div class="image">
+								<a href="blog-detail.html"><img src="images/resource/news-6.jpg" alt="" /></a>
+							</div>
+							<h3><a href="blog-detail.html">Google Adwords Management.</a></h3>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered.</div>
+							<a href="blog-detail.html" class="read-more">Read More</a>
+						</div>
+					</div>
+					<div class="news-block-two col-lg-6 col-md-12 col-sm-12">
+						<div class="inner-box">
+							<div class="image">
+								<a href="blog-detail.html"><img src="images/resource/news-7.jpg" alt="" /></a>
+							</div>
+							<h3><a href="blog-detail.html">Business or Brand you must have a funnel.</a></h3>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered.</div>
+							<a href="blog-detail.html" class="read-more">Read More</a>
+						</div>
+					</div>
+					
+				</div>
+				
+				<div class="lower-text">Increase organic visibility, quality traffic & sales of your online business. <a href="index-2.html#">See All Posts</a></div>
+			</div>
+		</div>
+	</section> -->
+	<!-- End News Section -->
+
+	<section class="services-page-section">
+		<div class="auto-container">
+			<div class="sec-title centered">
+				<div class="title">Our Services</div>
+				<h2>We Offer extrem level of services</h2>
+				<div class="text">At Cloud Way, we follow a simple yet effective process to provide the best possible service to our clients. <br /> Here's how we do it.</div>
+			</div>
+			<div class="row clearfix">
+			
+				<!-- Service Block Three -->
+				<div class="service-block-three col-lg-6 col-md-12 col-sm-12">
+					<div class="inner-box">
+						<div class="content">
+							<div class="icon-box">
+								<span class="icon flaticon-menu"></span>
+							</div>
+							<h4><a href="">Initial Consultation</a></h4>
+							<div class="text">We begin by scheduling an initial consultation with the student to understand their academic background, interests, and career aspirations. We ask them about their preferred study destination, course, and institution. This helps us to get a clear picture of their goals and expectations.</div>
+							<!-- <a href="service-detail.html" class="read-more">Read More</a> -->
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block Three -->
+				<div class="service-block-three col-lg-6 col-md-12 col-sm-12">
+					<div class="inner-box">
+						<div class="content">
+							<div class="icon-box">
+								<span class="icon flaticon-quote"></span>
+							</div>
+							<h4><a href="">Comprehensive Guidance</a></h4>
+							<div class="text">Based on the information gathered during the initial consultation, we provide comprehensive guidance to the student on their study abroad journey. We help them to choose the right course and institution that matches their academic background and career aspirations.</div>
+							<!-- <a href="service-detail.html" class="read-more">Read More</a> -->
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block Three -->
+				<div class="service-block-three col-lg-6 col-md-12 col-sm-12">
+					<div class="inner-box">
+						<div class="content">
+							<div class="icon-box">
+								<span class="icon flaticon-data"></span>
+							</div>
+							<h4><a href="">Application Assistance</a></h4>
+							<div class="text">We assist the student with the entire application process, including filling out the forms, gathering the necessary documents, and submitting the application. We ensure that all the information is accurate and complete, and we help students to meet the application deadlines.</div>
+							<!-- <a href="service-detail.html" class="read-more">Read More</a> -->
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block Three -->
+				<div class="service-block-three col-lg-6 col-md-12 col-sm-12">
+					<div class="inner-box">
+						<div class="content">
+							<div class="icon-box">
+								<span class="icon flaticon-promotion"></span>
+							</div>
+							<h4><a href="">Visa and Immigration Support</a></h4>
+							<div class="text">We provide guidance and support to the student with the visa and immigration process. We help them to understand the requirements, assist them with the paperwork, and ensure that they have all the necessary documents.</div>
+							<!-- <a href="service-detail.html" class="read-more">Read More</a> -->
+						</div>
+					</div>
+				</div>	
+				
+			</div>
+			<!-- Button Box -->
+			<div class="button-box text-center">
+				<a href="service.html" class="theme-btn btn-style-two"><span class="txt">View More</span></a>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Counter Section -->
+    <section class="counter-section style-two">
+		<div class="auto-container">
+		
+			<!-- Fact Counter -->
+			<div class="fact-counter">
+				<div class="row clearfix">
+
+					<!-- Column -->
+					<div class="column counter-column col-lg-4 col-md-6 col-sm-12">
+						<div class="inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="content">
+								<div class="count-outer count-box">
+									<span class="count-text" data-speed="2500" data-stop="10">0</span>+
+								</div>
+								<h4 class="counter-title">Years on the market</h4>
+							</div>
+						</div>
+					</div>
+
+					<!-- Column -->
+					<div class="column counter-column col-lg-4 col-md-6 col-sm-12">
+						<div class="inner wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+							<div class="content">
+								<div class="count-outer count-box alternate">
+									<span class="count-text" data-speed="4000" data-stop="100">0</span>+
+								</div>
+								<h4 class="counter-title">Associated Contries</h4>
+							</div>
+						</div>
+					</div>
+
+					<!-- Column -->
+					<div class="column counter-column col-lg-4 col-md-6 col-sm-12">
+						<div class="inner wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+							<div class="content">
+								<div class="count-outer count-box">
+									<span class="count-text" data-speed="5000" data-stop="1000">0</span>+
+								</div>
+								<h4 class="counter-title">Satisfied Students</h4>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Counter Section -->
+	
+	<!-- Testimonial Section -->
+	<section class="testimonial-section">
+		<div class="pattern-layer-two" style="background-image: url({% static 'images/icons/pattern-7.png' %})"></div>
+		<div class="pattern-layer-three" style="background-image: url({% static 'images/icons/pattern-8.png' %})"></div>
+		<div class="auto-container">
+			<div class="sec-title light centered">
+				<div class="title">Feedback</div>
+				<h2>Our students love our system.</h2>
+			</div>
+			<div class="inner-container">
+				<div class="two-item-carousel owl-carousel owl-theme">
+				
+					<!-- Testimonial Block / Style Two -->
+					<div class="testimonial-block style-two">
+						<div class="inner-box">
+							<div class="author-info">
+								<div class="info-inner">
+									<div class="author-image">
+										<div class="image">
+											<img src="{% static 'images/resource/author-1.jpg' %}" alt="" />
+										</div>
+									</div>
+									<div class="author-name">Paige Turner.</div>
+									<div class="designation">UK University, BSC Computer Science</div>
+									<div class="quote-icon flaticon-quote"></div>
+								</div>
+							</div>
+							<div class="text">“Simply dummy text of the printing and typesetting text ever since the when an unknown printer took a galley of type and scrambled it to make a type but also the leap into electronic typesetting.”</div>
+						</div>
+					</div>
+					
+					<!-- Testimonial Block / Style Two -->
+					<div class="testimonial-block style-two">
+						<div class="inner-box">
+							<div class="author-info">
+								<div class="info-inner">
+									<div class="author-image">
+										<div class="image">
+											<img src="{% static 'images/resource/author-2.jpg' %}" alt="" />
+										</div>
+									</div>
+									<div class="author-name">Anna Mull</div>
+									<div class="designation">Canada University, BSC in AI</div>
+									<div class="quote-icon flaticon-quote"></div>
+								</div>
+							</div>
+							<div class="text">“Simply dummy text of the printing and typesetting text ever since the when an unknown printer took a galley of type and scrambled it to make a type but also the leap into electronic typesetting.”</div>
+						</div>
+					</div>
+					
+					<!-- Testimonial Block / Style Two -->
+					<div class="testimonial-block style-two">
+						<div class="inner-box">
+							<div class="author-info">
+								<div class="info-inner">
+									<div class="author-image">
+										<div class="image">
+											<img src="{% static 'images/resource/author-1.jpg' %}" alt="" />
+										</div>
+									</div>
+									<div class="author-name">Paige Turner.</div>
+									<div class="designation">Canada University, BSC in AI</div>
+									<div class="quote-icon flaticon-quote"></div>
+								</div>
+							</div>
+							<div class="text">“Simply dummy text of the printing and typesetting text ever since the when an unknown printer took a galley of type and scrambled it to make a type but also the leap into electronic typesetting.”</div>
+						</div>
+					</div>
+					
+					<!-- Testimonial Block / Style Two -->
+					<div class="testimonial-block style-two">
+						<div class="inner-box">
+							<div class="author-info">
+								<div class="info-inner">
+									<div class="author-image">
+										<div class="image">
+											<img src="{% static 'images/resource/author-2.jpg' %}" alt="" />
+										</div>
+									</div>
+									<div class="author-name">Anna Mull</div>
+									<div class="designation">Canada University, BSC in AI</div>
+									<div class="quote-icon flaticon-quote"></div>
+								</div>
+							</div>
+							<div class="text">“Simply dummy text of the printing and typesetting text ever since the when an unknown printer took a galley of type and scrambled it to make a type but also the leap into electronic typesetting.”</div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Testimonial Section -->
+	<!-- Accreditations Section -->
+	<section class="services-page-section">
+		<div class="auto-container">
+			<div class="sec-title centered">
+				<h2>Accreditations</h2>
+			</div>
+			<div class="row clearfix">
+				<marquee behavior="Scroll" direction="left">
+					{% for accreditation in accreditations %}
+					<img src="{{ accreditation.image.url }}" alt="">
+					{% endfor %}
+				</marquee>
+			</div>
+		</div>
+	</section>
+	<!-- End Accreditations Section -->
+{% include 'includes/footer.html' %}
+	
+</div>
+<!--End pagewrapper-->
+
+<!-- Scroll To Top -->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
+{% endblock content %}

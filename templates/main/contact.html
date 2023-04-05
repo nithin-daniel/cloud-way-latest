@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'includes/navbar.html'%}
+
+
+	<!-- Page Title Section -->
+    <section class="page-title-section">
+		<div class="pattern-layer-four" style="background-image: url({% static 'images/icons/pattern-12.png' %})"></div>
+		<div class="pattern-layer-nine" style="background-image: url({% static 'images/icons/pattern-17.png' %})"></div>
+		<div class="pattern-layer-ten" style="background-image: url({% static 'images/icons/pattern-18.png' %})"></div>
+		<div class="auto-container">
+            <div class="content">
+				<h1>We are here to support you</h1>
+				<div class="text">Thank you for your interest in Cloude Way. We are here to help you achieve your academic goals and provide you with the best possible education consultancy services.</div>
+			</div>
+		</div>
+	</section>
+	<!--End Banner Section-->
+
+	<!-- Contact Page Section -->
+	<section class="contact-page-section">
+		<div class="auto-container">
+			<div class="sec-title centered">
+				<h2>Get in touch</h2>
+				<div class="text">We are available 24/7 to answer any questions you may have. <br /> Please use the following information to get in touch with us</div>
+			</div>
+			<div class="inner-container">
+				
+				<!-- Contact Form -->
+				<div class="contact-form">
+				
+					<!-- Profile Form -->
+					<form method="post" action="{% url 'contact' %}" id="contact-form" data-universities-url="{% url 'load_univeristies' %}" data-courses-url="{% url 'load_courses' %}">
+						<div class="row clearfix">
+							{% csrf_token %}
+							<div class="col-lg-6 col-md-6 col-sm-12 form-group">
+								<input type="text" name="first_name" placeholder="Full Name*" required="">
+							</div>
+							
+							<div class="col-lg-6 col-md-6 col-sm-12 form-group">
+								<input type="text" name="phone_number" placeholder="Phone Number*" required="">
+							</div>
+							
+							<div class="col-lg-6 col-md-6 col-sm-12 form-group">
+								<input type="text" name="address" placeholder="Address" required="">
+							</div>
+							
+							<div class="col-lg-6 col-md-6 col-sm-12 form-group">
+								<!-- <input type="text" name="phone" placeholder="Select preferred country" required=""> -->
+								<!-- <label for="cars">Choose a car:</label> -->
+								<select name="country" id="countries">
+									<option value="">Select preferred Country*</option>
+									{% for country in countries %}
+										<option value="{{ country.id }}">{{ country.title }}</option>
+									{% endfor %}
+								</select>
+							</div>
+
+							<div class="col-lg-6 col-md-6 col-sm-12 form-group">
+								<!-- <input type="text" name="phone" placeholder="Select preferred country" required=""> -->
+								<!-- <label for="cars">Choose a car:</label> -->
+								<select name="university" id="universities">
+									<option value="volvo">Select preferred University*</option>
+								</select>
+							</div>
+
+							<div class="col-lg-6 col-md-6 col-sm-12 form-group">
+								<!-- <input type="text" name="phone" placeholder="Select preferred country" required=""> -->
+								<!-- <label for="cars">Choose a car:</label> -->
+								<select name="course" id="courses">
+									<option value="volvo">Select preferred Course*</option>
+								</select>
+							</div>
+							
+							<div class="col-lg-12 col-md-12 col-sm-12 form-group">
+								<textarea class="" name="message" placeholder="Your message"></textarea>
+							</div>
+							
+							<div class="col-lg-12 col-md-12 col-sm-12 form-group">
+								<button class="theme-btn btn-style-two" type="submit" name="submit-form"><span class="txt">Send Message</span></button>
+							</div>
+							
+						</div>
+					</form>
+						
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- End Contact Page Section -->
+	
+	<!-- Map Section -->
+	<section class="map-section">
+		<!-- Map Boxed -->
+		<div class="map-boxed">
+			<!--Map Outer-->
+			<div class="map-outer">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126135.3765456934!2d76.55344642040357!3d8.904626453272614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05fd53b7d01ea9%3A0x75dd5181df04badd!2sCLOUDWAY%20EDUCATIONAL%20CONSULTANCY%20HEAD%20OFFICE!5e0!3m2!1sen!2sin!4v1680293810905!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+	</section>
+	<!-- End Map Section -->
+
+	<script>
+		$("#countries").change(function(){
+		var url = $("#contact-form").attr("data-universities-url");  // get the url of the `load_cities` view
+      	var countryId = $(this).val();  // get the selected country ID from the HTML input
+
+      $.ajax({                       // initialize an AJAX request
+        url: url,                    // set the url of the request (= localhost:8000/hr/ajax/load-cities/)
+        data: {
+          'country': countryId       // add the country id to the GET parameters
+        },
+        success: function (data) {   // `data` is the return of the `load_cities` view function
+          $("#universities").html(data);  // replace the contents of the city input with the data that came from the server
+		  $('#courses').html(
+			'<option value="volvo">Select preferred Course*</option>'
+		  )
+        }
+      });
+});
+$("#universities").change(function(){
+		var url = $("#contact-form").attr("data-courses-url");  // get the url of the `load_cities` view
+      	var UniversityId = $(this).val();  // get the selected country ID from the HTML input
+
+      $.ajax({                       // initialize an AJAX request
+        url: url,                    // set the url of the request (= localhost:8000/hr/ajax/load-cities/)
+        data: {
+          'university': UniversityId       // add the country id to the GET parameters
+        },
+        success: function (data) {   // `data` is the return of the `load_cities` view function
+          $("#courses").html(data);  // replace the contents of the city input with the data that came from the server
+        }
+      });
+});
+	</script>
+	
+{% include 'includes/footer.html'%}
+{% endblock content %}

@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="main-header header-style-two">
+    <div class="header-top">
+        <div class="auto-container">
+            <div class="clearfix">
+            
+                <!-- Top Left -->
+                <div class="top-left pull-left clearfix">
+                    <!-- Info List -->
+                    <ul class="info-list">
+                        <li><span>Call Us: </span><a href="tel:+919745926142"> +91-9745926142</a></li>
+                        <li><span>Support:</span><a href="mailto:Info@cloudwayeducation.com"> Info@cloudwayeducation.com</a></li>
+                    </ul>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    {% include 'includes/navbar.html' %}
+
+	<!-- Page Title Section -->
+    <section class="page-title-section">
+		<div class="pattern-layer-three" style="background-image: url({% static 'images/icons/pattern-11.png' %})"></div>
+		<div class="pattern-layer-four" style="background-image: url({% static 'images/icons/pattern-12.png' %})"></div>
+		<div class="pattern-layer-thirteen" style="background-image: url({% static 'images/icons/pattern-21.png' %})"></div>
+		<div class="pattern-layer-twelve" style="background-image: url({% static 'images/icons/pattern-20.png' %})"></div>
+		<!-- <div class="auto-container">
+            <div class="content">
+				<h1>Univercity</h1>
+				<div class="text">Simply dummy text of the printing and typesetting text ever since the when. Simply dummy text <br> of the printing and typesetting text ever since the when.</div>
+			</div>
+		</div> -->
+	</section>
+	<!--End Banner Section-->
+	
+	<!-- Company Section Three -->
+	<section class="company-section-three">
+		<div class="auto-container" style="display: flex;">
+			<div class="sec-title centered">
+				<h2>{{ university.university_name }}</h2>
+				<div class="text">{{ university.university_details }}</div>
+				
+			</div>
+			<div class="inner-container">
+				<div class="pattern-layer-one" style="background-image: url({% static 'images/icons/pattern-5.png' %})"></div>
+				<!-- Video Box -->
+				<div class="video-box">
+					<figure class="video-image">
+						<img src="{% static 'images/resource/video-image.jpg' %}" alt="">
+					</figure>
+					<!-- <a href="" class="lightbox-image overlay-box"><span class="flaticon-play-arrow"><i class="ripple"></i></span></a> -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Company Section Three -->
+	
+	<!-- Works Section -->
+	<section class="works-section style-two">
+		<div class="auto-container">
+			<div class="row clearfix">
+				
+				<!-- Blocks Column -->
+				<div class="blocks-column col-lg-7 col-md-12 col-sm-12">
+					<div class="inner-column">
+						<div class="row clearfix">
+							
+							<!-- Work Block -->
+							<div class="work-block col-lg-6 col-md-6 col-sm-12">
+								<div class="inner-box">
+									<a href="" class="overlay-link"></a>
+									<div class="content">
+										<div class="icon"><img src="{{ university.university_specialities_1_icon.url }}" alt="" /></div>
+										<h4>{{ university.university_specialities_1 }}</h4>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Work Block -->
+							<div class="work-block col-lg-6 col-md-6 col-sm-12">
+								<div class="inner-box">
+									<a href="" class="overlay-link"></a>
+									<div class="content">
+										<div class="icon"><img src="{{ university.university_specialities_2_icon.url }}" alt="" /></div>
+										<h4>{{ university.university_specialities_2 }}</h4>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Work Block -->
+							<div class="work-block col-lg-6 col-md-6 col-sm-12">
+								<div class="inner-box">
+									<a href="" class="overlay-link"></a>
+									<div class="content">
+										<div class="icon"><img src="{{ university.university_specialities_3_icon }}" alt="" /></div>
+										<h4>{{ university.university_specialities_3 }}</h4>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Work Block -->
+							<div class="work-block col-lg-6 col-md-6 col-sm-12">
+								<div class="inner-box">
+									<a href="" class="overlay-link"></a>
+									<div class="content">
+										<div class="icon"><img src="{{ university.university_specialities_4_icon.url }}" alt="" /></div>
+										<h4>{{ university.university_specialities_4 }}</h4>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Work Block -->
+							<div class="work-block offset-lg-3 col-lg-6 col-md-6 col-sm-12">
+								<div class="inner-box">
+									<a href="" class="overlay-link"></a>
+									<div class="content">
+										<div class="icon"><img src="{{ university.university_specialities_5_icon }}" alt="" /></div>
+										<h4>{{ university.university_specialities_5 }}</h4>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+				<!-- Title Column -->
+				<div class="title-column col-lg-5 col-md-12 col-sm-12">
+					<div class="inner-column">
+						<div class="sec-title">
+							<h2>To join our company and <br> get all benefits</h2>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered you’re. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- End Works Section -->
+	
+	<!-- Jobs Section -->
+
+	<section class="help-page-section">
+		<div class="pattern-layer-one" style="background-image: url({% static 'images/icons/pattern-5.png' %})"></div>
+		
+		<div class="auto-container">
+			<div class="sec-title centered">
+				<h2>Courses We Provide</h2>
+				<div class="text">Replenish him third creature and meat blessed void a fruit gath<br>ered you’re. Lorem Ipsum is simply dummy text.</div>
+			</div>
+			<div class="inner-container">
+				<div class="row clearfix">
+					
+					{% for i in university.courses.all %}
+						<div class="help-block col-lg-3 col-md-6 col-sm-12">
+							<div class="inner-box">
+								<div class="icon flaticon-shield"></div>
+								<h5><a href="##">{{ i.title }}</a></h5>
+								<div class="text">{{ i.description }}</div>
+							</div>
+						</div>
+					{% endfor %}
+						
+					<!-- Help Block -->
+					
+					{% comment %} <!-- Help Block -->
+					<div class="help-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="icon flaticon-promotion"></div>
+							<h5><a href="##">B.Tech Bio Metrical Engineering</a></h5>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered.</div>
+						</div>
+					</div>
+					
+					<!-- Help Block -->
+					<div class="help-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="icon flaticon-hand"></div>
+							<h5><a href="##">B.Tech Bio Metrical Engineering</a></h5>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered.</div>
+						</div>
+					</div>
+					
+					<!-- Help Block -->
+					<div class="help-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="icon flaticon-shield"></div>
+							<h5><a href="##">B.Tech Bio Metrical Engineering</a></h5>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered.</div>
+						</div>
+					</div>
+					
+					<!-- Help Block -->
+					<div class="help-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="icon flaticon-user-3"></div>
+							<h5><a href="##">B.Tech Bio Metrical Engineering</a></h5>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered.</div>
+						</div>
+					</div>
+					
+					<!-- Help Block -->
+					<div class="help-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="icon flaticon-project-management"></div>
+							<h5><a href="##">B.Tech Bio Metrical Engineering</a></h5>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered.</div>
+						</div>
+					</div>
+					
+					<!-- Help Block -->
+					<div class="help-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="icon flaticon-swipe-left"></div>
+							<h5><a href="##">B.Tech Bio Metrical Engineering</a></h5>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered.</div>
+						</div>
+					</div>
+					
+					<!-- Help Block -->
+					<div class="help-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="icon flaticon-padlock"></div>
+							<h5><a href="##">B.Tech Bio Metrical Engineering</a></h5>
+							<div class="text">Replenish him third creature and meat blessed void a fruit gathered.</div>
+						</div>
+					</div> {% endcomment %}
+					
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- End Jobs Section -->
+{% endblock content %}

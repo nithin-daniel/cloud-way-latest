@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="main-header header-style-two">
+    <div class="header-top">
+        <div class="auto-container">
+            <div class="clearfix">
+            
+                <!-- Top Left -->
+                <div class="top-left pull-left clearfix">
+                
+                    <!-- Info List -->
+                    <ul class="info-list">
+                        <li><span>Call Us: </span><a href="tel:+919745926142"> +91-9745926142</a></li>
+                        <li><span>Support:</span><a href="mailto:Info@cloudwayeducation.com"> Info@cloudwayeducation.com</a></li>
+                    </ul>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'includes/navbar.html' %}
+ 
+	<!-- Page Title Section -->
+    <section class="page-title-section">
+		<div class="pattern-layer-three" style="background-image: url({% static 'images/icons/pattern-11.png' %})"></div>
+		<div class="pattern-layer-four" style="background-image: url({% static 'images/icons/pattern-12.png' %})"></div>
+		<div class="pattern-layer-seven" style="background-image: url({% static 'images/icons/pattern-15.png' %})"></div>
+		<div class="pattern-layer-eight" style="background-image: url({% static 'images/icons/pattern-16.png' %})"></div>
+		<div class="auto-container">
+            <div class="content">
+				<h1>Our Best Moments</h1>
+				<div class="text">At Cloud Way, we take pride in helping our clients achieve their academic goals and providing top-quality education consultancy services. <br> We just list-out our best moments in our journey.</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Blog Posts Section -->
+	<section class="blog-posts-section">
+		<div class="pattern-layer-one" style="background-image: url({% static 'images/icons/pattern-5.png' %})"></div>
+		<div class="auto-container">
+			<div class="sec-title centered">
+				<div class="title">Moments</div>
+				<h2>Enjoy our Best Moments.</h2>
+			</div>
+			<div class="row clearfix">
+				
+				<!-- News Block Two -->
+                
+                {% for i in moments %}
+                    <div class="news-block-two col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <a href="#"><img src="{{ i.image.url }}" alt="" /></a>
+                            </div>
+                            <h3><a href="#">{{i.title}}</a></h3>
+                            <div class="text">{{i.content}}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+		</div>
+	</section>
+	<!-- End Blog Posts Section -->
+	
+{% include 'includes/footer.html' %}
+{% endblock content %}

@@ -1,0 +1,236 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="main-header header-style-two">
+    <div class="header-top">
+        <div class="auto-container">
+            <div class="clearfix">
+            
+                <!-- Top Left -->
+                <div class="top-left pull-left clearfix">
+                
+                    <!-- Info List -->
+                    <ul class="info-list">
+                        <li><span>Call Us: </span><a href="tel:+919745926142"> +91-9745926142</a></li>
+                        <li><span>Support:</span><a href="mailto:Info@cloudwayeducation.com"> Info@cloudwayeducation.com</a></li>
+                    </ul>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    {% include 'includes/navbar.html' %}
+    <!-- Page Title Section -->
+    <section class="page-title-section">
+		<div class="pattern-layer-three" style="background-image: url({% static 'images/icons/pattern-11.png' %})"></div>
+		<div class="pattern-layer-four" style="background-image: url({% static 'images/icons/pattern-12.png' %})"></div>
+		<div class="pattern-layer-five" style="background-image: url({% static 'images/icons/pattern-13.png' %})"></div>
+		<div class="pattern-layer-six" style="background-image: url({% static 'images/icons/pattern-14.png' %})"></div>
+		<div class="auto-container">
+            <div class="content">
+				<h1>Benefit of studying in {{obj.title}}</h1>
+				<div class="text">{{obj.description}}</div>
+			</div>
+		</div>
+	</section>
+	<!--End Banner Section-->
+	
+	<!-- Service Detail Section -->
+	<section class="service-detail-section">
+		<div class="pattern-layer-one" style="background-image: url({% static 'images/icons/pattern-5.png' %})"></div>
+		<div class="pattern-layer-two" style="background-image: url({% static 'images/icons/pattern-5.png' %})"></div>
+		<div class="auto-container">
+			<div class="inner-container">
+				<div class="image">
+					<div class="imageContainer">
+						<img src="{{ obj.banner.url }}" alt="" />
+					</div>
+				</div>
+				<div class="lower-content">
+					<h2>Benefits of {{obj.title}}</h2>
+					<p>{{ obj.details|linebreaks }}</p>
+					{% comment %} <p>In addition to academic excellence, Canada also offers a safe and welcoming environment for international students. The country is known for its diversity, with people from all over the world living and studying together. Canadian cities are known for their friendliness, cultural vibrancy, and quality of life. International students can also work part-time while studying and apply for a post-graduation work permit to gain valuable work experience in Canada.</p> {% endcomment %}
+					<ul class="service-list">
+						<li>{{ obj.feature_1 }}</li>
+						<li>{{ obj.feature_2 }}</li>
+						<li>{{ obj.feature_3 }}</li>
+					</ul>
+					<h3>Study in {{obj.title}} universities with Cloud Way</h3>
+					<p>{{ obj.benefits_of_cloud_way | linebreaks }}</p>
+					<div class="two-column">
+                        <div class="row clearfix">
+                            {% for i in university %}
+								<div class="Universities">
+									<div class="image">
+										<!-- <a href="./Univercity.html"><img src="images/universities/01.png" alt="" /></a> -->
+										
+										<div class="service-block-two">
+											<div class="inner-box" style="margin: 10px;">
+												<div class="icon-box">
+													<span class=""><img src="{{ i.university_image.url }}" alt=""></span>
+												</div>
+												<h4><a href="{% url 'university_detail_page' i.id %}">Study in {{ i.university_name }}</a></h4>
+												<div class="text">{{ i.desciption }}</div>
+											</div>
+										</div>
+									</div>
+								</div>
+                            {% endfor %}
+							
+							{% comment %} <div class="Universities">
+								<div class="image">
+									<!-- <img src="images/universities/02.png" alt="" /> -->
+									<div class="service-block-two">
+										<div class="inner-box" style="margin: 10px;">
+											<div class="icon-box">
+												<span class=""><img src="{% static 'images/universities/01.png' %}" alt=""></span>
+											</div>
+											<h4><a href="Univercity.html">Study in italy</a></h4>
+											<div class="text">Replenish him third creature and meat blessed void a fruit gathered</div>
+										</div>
+									</div>
+								</div>
+							</div> {% endcomment %}
+							
+							{% comment %} <div class="Universities">
+								<div class="image">
+									<!-- <img src="images/universities/03.png" alt="" /> -->
+									<div class="service-block-two">
+										<div class="inner-box" style="margin: 10px;">
+											<div class="icon-box">
+												<span class=""><img src="{% static 'images/universities/01.png' %}" alt=""></span>
+											</div>
+											<h4><a href="Univercity.html">Study in italy</a></h4>
+											<div class="text">Replenish him third creature and meat blessed void a fruit gathered</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="Universities">
+								<div class="image">
+									<!-- <img src="images/universities/03.png" alt="" /> -->
+									<div class="service-block-two">
+										<div class="inner-box" style="margin: 10px;">
+											<div class="icon-box">
+												<span class=""><img src="{% static 'images/universities/01.png' %}" alt=""></span>
+											</div>
+											<h4><a href="service-detail.html">Study in italy</a></h4>
+											<div class="text">Replenish him third creature and meat blessed void a fruit gathered</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="Universities">
+								<div class="image">
+									<!-- <img src="images/universities/03.png" alt="" /> -->
+									<div class="service-block-two">
+										<div class="inner-box" style="margin: 10px;">
+											<div class="icon-box">
+												<span class=""><img src="{% static 'images/universities/01.png' %}" alt=""></span>
+											</div>
+											<h4><a href="service-detail.html">Study in italy</a></h4>
+											<div class="text">Replenish him third creature and meat blessed void a fruit gathered</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="Universities">
+								<div class="image">
+									<!-- <img src="images/universities/04.png" alt="" /> -->
+									<div class="service-block-two">
+										<div class="inner-box" style="margin: 10px;">
+											<div class="icon-box">
+												<span class=""><img src="{% static 'images/universities/01.png' %}" alt=""></span>
+											</div>
+											<h4><a href="service-detail.html">Study in italy</a></h4>
+											<div class="text">Replenish him third creature and meat blessed void a fruit gathered</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="Universities">
+								<div class="image">
+									<!-- <img src="images/universities/08.png" alt="" /> -->
+									<div class="service-block-two">
+										<div class="inner-box" style="margin: 10px;">
+											<div class="icon-box">
+												<span class=""><img src="{% static 'images/universities/01.png' %}" alt=""></span>
+											</div>
+											<h4><a href="service-detail.html">Study in italy</a></h4>
+											<div class="text">Replenish him third creature and meat blessed void a fruit gathered</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="Universities">
+								<div class="image">
+									<!-- <img src="images/universities/04.png" alt="" /> -->
+									<div class="service-block-two">
+										<div class="inner-box" style="margin: 10px;">
+											<div class="icon-box">
+												<span class=""><img src="{% static 'images/universities/01.png' %}" alt=""></span>
+											</div>
+											<h4><a href="service-detail.html">Study in italy</a></h4>
+											<div class="text">Replenish him third creature and meat blessed void a fruit gathered</div>
+										</div>
+									</div>
+								</div>
+							</div> {% endcomment %}
+						</div>
+					</div>
+					<p>If you are considering studying in {{ obj.title }}, let Cloude Way be your partner in your study abroad journey. Contact us today to learn more about our services and how we can help you achieve your academic goals in {{ obj.title }}.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Service Detail Section -->
+	
+	<!-- Ticket Section -->
+	<section class="ticket-section">
+		<div class="auto-container">
+			<div class="inner-container">
+				<div class="row clearfix">
+					
+					<!-- Column -->
+					<div class="column col-lg-3 col-md-6 col-sm-12">
+						<ul class="ticket-list">
+							<li>Email us</li>
+							<li><a href="mailto:Info@cloudwayeducation.com">Info@cloudwayeducation.com</a></li>
+						</ul>
+					</div>
+					
+					<!-- Column -->
+					<div class="column col-lg-3 col-md-6 col-sm-12">
+						<ul class="ticket-list">
+							<li>Call us</li>
+							<li><a href="tel:+919745926142">+91-9745926142</a></li>
+						</ul>
+					</div>
+					
+					<!-- Column -->
+					<div class="column col-lg-3 col-md-6 col-sm-12">
+						<ul class="ticket-list">
+							<li>Get in touch</li>
+							<li><a href="service-detail.html#">Contact Now</a></li>
+						</ul>
+					</div>
+					
+					<!-- Column -->
+					<div class="column col-lg-3 col-md-6 col-sm-12">
+						<a href="tel:+919745926142" class="theme-btn btn-style-two"><span class="txt">Free Consultation</span></a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Ticket Section -->
+	{% include 'includes/footer.html' %}
+{% endblock content %}

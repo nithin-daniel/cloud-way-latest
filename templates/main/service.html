@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="main-header header-style-two">
+    <div class="header-top">
+        <div class="auto-container">
+            <div class="clearfix">
+            
+                <!-- Top Left -->
+                <div class="top-left pull-left clearfix">
+                
+                    <!-- Info List -->
+                    <ul class="info-list">
+                        <li><span>Call Us: </span><a href="tel:+919745926142"> +91-9745926142</a></li>
+                        <li><span>Support:</span><a href="mailto:Info@cloudwayeducation.com"> Info@cloudwayeducation.com</a></li>
+                    </ul>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'includes/navbar.html' %}
+<!-- Page Title Section -->
+<section class="page-title-section">
+    <div class="pattern-layer-one" style="background-image: url({% static 'images/icons/pattern-9.png' %})"></div>
+    <div class="pattern-layer-two" style="background-image: url({% static 'images/icons/pattern-10.png' %})"></div>
+    <div class="pattern-layer-three" style="background-image: url({% static 'images/icons/pattern-11.png' %})"></div>
+    <div class="pattern-layer-four" style="background-image: url({% static 'images/icons/pattern-12.png' %})"></div>
+    <div class="auto-container">
+        <div class="content">
+            <h1>Services</h1>
+            <div class="text">At Cloud Way, we follow a simple yet effective process to provide the best possible service to our clients.<br /> Here's how we do it.</div>
+        </div>
+    </div>
+</section>
+<!--End Banner Section-->
+
+<!-- Services Page Section -->
+<section class="services-page-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+        
+            <!-- Service Block Three -->
+            
+            {% for i in service %}   
+                <div class="service-block-three col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-box">
+                        <div class="content">
+                            <div class="icon-box">
+                                <span class="{{ i.icon_class_name }}"></span>
+                            </div>
+                            <h4><a href="">{{ i.title }}</a></h4>
+                            <div class="text">{{ i.content }}</div>
+                            <!-- <a href="service-detail.html" class="read-more">Read More</a> -->
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            {% comment %} <!-- Service Block Three -->
+            <div class="service-block-three col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-box">
+                    <div class="content">
+                        <div class="icon-box">
+                            <span class="icon flaticon-quote"></span>
+                        </div>
+                        <h4><a href="">Comprehensive Guidance</a></h4>
+                        <div class="text">Based on the information gathered during the initial consultation, we provide comprehensive guidance to the student on their study abroad journey. We help them to choose the right course and institution that matches their academic background and career aspirations.</div>
+                        <!-- <a href="service-detail.html" class="read-more">Read More</a> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Block Three -->
+            <div class="service-block-three col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-box">
+                    <div class="content">
+                        <div class="icon-box">
+                            <span class="icon flaticon-data"></span>
+                        </div>
+                        <h4><a href="">Application Assistance</a></h4>
+                        <div class="text">We assist the student with the entire application process, including filling out the forms, gathering the necessary documents, and submitting the application. We ensure that all the information is accurate and complete, and we help students to meet the application deadlines.</div>
+                        <!-- <a href="service-detail.html" class="read-more">Read More</a> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Block Three -->
+            <div class="service-block-three col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-box">
+                    <div class="content">
+                        <div class="icon-box">
+                            <span class="icon flaticon-promotion"></span>
+                        </div>
+                        <h4><a href="">Visa and Immigration Support</a></h4>
+                        <div class="text">We provide guidance and support to the student with the visa and immigration process. We help them to understand the requirements, assist them with the paperwork, and ensure that they have all the necessary documents.</div>
+                        <!-- <a href="service-detail.html" class="read-more">Read More</a> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Block Three -->
+            <div class="service-block-three col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-box">
+                    <div class="content">
+                        <div class="icon-box">
+                            <span class="icon flaticon-data"></span>
+                        </div>
+                        <h4><a href="service-detail.html">Accommodation Assistance</a></h4>
+                        <div class="text">We assist the student with finding suitable accommodation near their study institution. We help them to understand the different accommodation options available and assist them with the booking process.</div>
+                        <!-- <a href="service-detail.html" class="read-more">Read More</a> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Block Three -->
+            <div class="service-block-three col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-box">
+                    <div class="content">
+                        <div class="icon-box">
+                            <span class="icon flaticon-promotion"></span>
+                        </div>
+                        <h4><a href="service-detail.html">Travel Arrangements</a></h4>
+                        <div class="text">We assist the student with their travel arrangements, including flight bookings and airport transfers. We ensure that they have a hassle-free travel experience to their study destination.</div>
+                        <!-- <a href="service-detail.html" class="read-more">Read More</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="service-block-three col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-box">
+                    <div class="content">
+                        <div class="icon-box">
+                            <span class="icon flaticon-promotion"></span>
+                        </div>
+                        <h4><a href="service-detail.html">Pre-Departure Briefing</a></h4>
+                        <div class="text">We provide the student with a pre-departure briefing before they leave for their study destination. This includes information on the culture, lifestyle, and academic environment of the country they will be studying in.</div>
+                        <!-- <a href="service-detail.html" class="read-more">Read More</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="service-block-three col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-box">
+                    <div class="content">
+                        <div class="icon-box">
+                            <span class="icon flaticon-promotion"></span>
+                        </div>
+                        <h4><a href="service-detail.html">Ongoing Support</a></h4>
+                        <div class="text">We provide ongoing support to our clients even after they have arrived at their study destination. We are always available to answer any questions or concerns they may have, and we help them to adjust to their new environment.</div>
+                        <!-- <a href="service-detail.html" class="read-more">Read More</a> -->
+                    </div>
+                </div>
+            </div> {% endcomment %}
+            
+        </div>
+    </div>
+</section>
+<!-- End Services Section -->
+
+{% include 'includes/footer.html' %}
+{% endblock content %}
