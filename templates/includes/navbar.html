@@ -10,8 +10,8 @@
             	<div class="clearfix">
                 	
                 	<div class="pull-left logo-box">
-                    	<div class="logo"><a href="index.html"><img src="{% static 'images/logo3.png' %}" alt="" title=""></a></div>
-						<div class="logo-two" style="width: 30%;"><a href="index.html"><img src="{% static 'images/logo-mobile.png' %}" alt="" title=""></a></div>
+                    	<div class="logo"><a href="{% url 'index' %}"><img src="{% static 'images/logo3.png' %}" alt="" title=""></a></div>
+						<div class="logo-two" style="width: 30%;"><a href="{% url 'index' %}"><img src="{% static 'images/logo-mobile.png' %}" alt="" title=""></a></div>
                     </div>
 					
                    	<div class="nav-outer clearfix">
@@ -34,6 +34,7 @@
 									<li><a href="{% url 'about' %}">About Us</a></li>
 									<li class="dropdown"><a href="{% url 'service' %}">Services</a></li>
 									<li class=""><a href="{% url 'moments' %}">Moments</a></li>
+                                    <li><a href="{% url 'all-courses' %}">All Courses</a></li>
                                     <li><a href="{% url 'contact' %}">Contact Us</a></li>
 								</ul>
 							</div>

@@ -1,20 +1,25 @@
 from django.shortcuts import render
 from random import shuffle
-from main.models import CeoMessage,CeoAbout,Moments,ServicingCountries,University,Service,CourseProvide,Accreditations
+from main.models import CeoMessage,AboutCard,Moments,ServicingCountries,University,Service,CourseProvide,Accreditations,Testimonials
 from main.forms import ContactForm
 
 # Create your views here.
 def index(request):
     servicing_countries = ServicingCountries.objects.all()
     accreditations = Accreditations.objects.all()
+    service = Service.objects.all()
+    testimonials = Testimonials.objects.all()
+
     context = {
         "accreditations":accreditations,
-        "servicing_countries":servicing_countries
+        "servicing_countries":servicing_countries,
+        "service":service,
+        "testimonials":testimonials
     }
     return render(request,'home.html',context)
 def about(request):
     ceo_message_obj = CeoMessage.objects.all()
-    ceo_about_objs = CeoAbout.objects.all()
+    ceo_about_objs = AboutCard.objects.all()
 
     context = {
         "ceo_name":ceo_message_obj,
@@ -70,6 +75,13 @@ def contact(request):
         "countries":countries,
     }
     return render(request,'main/contact.html',context)
+
+def all_courses(request):
+    course = CourseProvide.objects.all()
+    context = {
+        "courses":course
+    }
+    return render(request,'main/courses.html',context)
 
 def load_univeristies(request):
     country_id = request.GET.get('country')

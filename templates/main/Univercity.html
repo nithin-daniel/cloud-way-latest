@@ -39,7 +39,7 @@
 	
 	<!-- Company Section Three -->
 	<section class="company-section-three">
-		<div class="auto-container" style="display: flex;">
+		<div class="auto-container" style="	display: flex;">
 			<div class="sec-title centered">
 				<h2>{{ university.university_name }}</h2>
 				<div class="text">{{ university.university_details }}</div>
@@ -50,7 +50,7 @@
 				<!-- Video Box -->
 				<div class="video-box">
 					<figure class="video-image">
-						<img src="{% static 'images/resource/video-image.jpg' %}" alt="">
+						<img src="{{ university.university_image.url }}" alt="">
 					</figure>
 					<!-- <a href="" class="lightbox-image overlay-box"><span class="flaticon-play-arrow"><i class="ripple"></i></span></a> -->
 				</div>
@@ -159,7 +159,7 @@
 					{% for i in university.courses.all %}
 						<div class="help-block col-lg-3 col-md-6 col-sm-12">
 							<div class="inner-box">
-								<div class="icon flaticon-shield"></div>
+								<div class="fa fa-book"  style="font-size:30px"></div>
 								<h5><a href="##">{{ i.title }}</a></h5>
 								<div class="text">{{ i.description }}</div>
 							</div>
@@ -237,4 +237,5 @@
 		</div>
 	</section>
 	<!-- End Jobs Section -->
+	{% include 'includes/footer.html' %}
 {% endblock content %}

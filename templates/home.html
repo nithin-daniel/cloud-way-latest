@@ -121,7 +121,7 @@
 							<div class="text">At Cloud Way, we believe in providing personalized attention to each of our clients. We strive to make the application process hassle-free, so that students can focus on their studies and achieve their career aspirations. Our mission is to be the trusted partner for students seeking to study abroad, and to help them make informed decisions that will shape their future.</div>
 						
 						</div>
-						<a href="about.html" class="theme-btn btn-style-two"><span class="txt">Learn More</span></a>
+						<a href="{% url 'about' %}" class="theme-btn btn-style-two"><span class="txt">Learn More</span></a>
 					</div>
 				</div>
 				
@@ -436,18 +436,21 @@
 				<div class="service-block-three col-lg-6 col-md-12 col-sm-12">
 					<div class="inner-box">
 						<div class="content">
+							{% for service in service %}
 							<div class="icon-box">
-								<span class="icon flaticon-menu"></span>
+								<span class="{{ service.icon_class_name }}"></span>
 							</div>
-							<h4><a href="">Initial Consultation</a></h4>
-							<div class="text">We begin by scheduling an initial consultation with the student to understand their academic background, interests, and career aspirations. We ask them about their preferred study destination, course, and institution. This helps us to get a clear picture of their goals and expectations.</div>
+								<h4><a href="">{{ service.title }}</a></h4>
+								<div class="text">{{ service.content }}</div>	
+							{% endfor %}
+								
 							<!-- <a href="service-detail.html" class="read-more">Read More</a> -->
 						</div>
 					</div>
 				</div>
 				
 				<!-- Service Block Three -->
-				<div class="service-block-three col-lg-6 col-md-12 col-sm-12">
+				<!-- <div class="service-block-three col-lg-6 col-md-12 col-sm-12">
 					<div class="inner-box">
 						<div class="content">
 							<div class="icon-box">
@@ -455,13 +458,13 @@
 							</div>
 							<h4><a href="">Comprehensive Guidance</a></h4>
 							<div class="text">Based on the information gathered during the initial consultation, we provide comprehensive guidance to the student on their study abroad journey. We help them to choose the right course and institution that matches their academic background and career aspirations.</div>
-							<!-- <a href="service-detail.html" class="read-more">Read More</a> -->
+							 <a href="service-detail.html" class="read-more">Read More</a> -->
 						</div>
 					</div>
-				</div>
+				</div> 
 				
 				<!-- Service Block Three -->
-				<div class="service-block-three col-lg-6 col-md-12 col-sm-12">
+				<!-- <div class="service-block-three col-lg-6 col-md-12 col-sm-12">
 					<div class="inner-box">
 						<div class="content">
 							<div class="icon-box">
@@ -469,13 +472,13 @@
 							</div>
 							<h4><a href="">Application Assistance</a></h4>
 							<div class="text">We assist the student with the entire application process, including filling out the forms, gathering the necessary documents, and submitting the application. We ensure that all the information is accurate and complete, and we help students to meet the application deadlines.</div>
-							<!-- <a href="service-detail.html" class="read-more">Read More</a> -->
+							 <a href="service-detail.html" class="read-more">Read More</a> -->
 						</div>
 					</div>
-				</div>
+				</div> 
 				
 				<!-- Service Block Three -->
-				<div class="service-block-three col-lg-6 col-md-12 col-sm-12">
+				<!-- <div class="service-block-three col-lg-6 col-md-12 col-sm-12">
 					<div class="inner-box">
 						<div class="content">
 							<div class="icon-box">
@@ -483,10 +486,10 @@
 							</div>
 							<h4><a href="">Visa and Immigration Support</a></h4>
 							<div class="text">We provide guidance and support to the student with the visa and immigration process. We help them to understand the requirements, assist them with the paperwork, and ensure that they have all the necessary documents.</div>
-							<!-- <a href="service-detail.html" class="read-more">Read More</a> -->
+							 <a href="service-detail.html" class="read-more">Read More</a> -->
 						</div>
 					</div>
-				</div>	
+				</div>	 
 				
 			</div>
 			<!-- Button Box -->
@@ -559,26 +562,28 @@
 				<div class="two-item-carousel owl-carousel owl-theme">
 				
 					<!-- Testimonial Block / Style Two -->
+					{% for testimonial in testimonials %}
 					<div class="testimonial-block style-two">
 						<div class="inner-box">
 							<div class="author-info">
 								<div class="info-inner">
 									<div class="author-image">
 										<div class="image">
-											<img src="{% static 'images/resource/author-1.jpg' %}" alt="" />
+											<img src="{{ testimonial.student_image.url }}" alt="" />
 										</div>
 									</div>
-									<div class="author-name">Paige Turner.</div>
-									<div class="designation">UK University, BSC Computer Science</div>
+									<div class="author-name">{{ testimonial.student_name }}</div>
+									<div class="designation">{{ testimonial.course_name_and_university }}</div>
 									<div class="quote-icon flaticon-quote"></div>
 								</div>
 							</div>
-							<div class="text">“Simply dummy text of the printing and typesetting text ever since the when an unknown printer took a galley of type and scrambled it to make a type but also the leap into electronic typesetting.”</div>
+							<div class="text">“{{ testimonial.description }}”</div>
 						</div>
 					</div>
+					{% endfor %}
 					
 					<!-- Testimonial Block / Style Two -->
-					<div class="testimonial-block style-two">
+					<!-- <div class="testimonial-block style-two">
 						<div class="inner-box">
 							<div class="author-info">
 								<div class="info-inner">
@@ -594,10 +599,10 @@
 							</div>
 							<div class="text">“Simply dummy text of the printing and typesetting text ever since the when an unknown printer took a galley of type and scrambled it to make a type but also the leap into electronic typesetting.”</div>
 						</div>
-					</div>
+					</div> -->
 					
 					<!-- Testimonial Block / Style Two -->
-					<div class="testimonial-block style-two">
+					<!-- <div class="testimonial-block style-two">
 						<div class="inner-box">
 							<div class="author-info">
 								<div class="info-inner">
@@ -613,10 +618,10 @@
 							</div>
 							<div class="text">“Simply dummy text of the printing and typesetting text ever since the when an unknown printer took a galley of type and scrambled it to make a type but also the leap into electronic typesetting.”</div>
 						</div>
-					</div>
+					</div> -->
 					
 					<!-- Testimonial Block / Style Two -->
-					<div class="testimonial-block style-two">
+					<!-- <div class="testimonial-block style-two">
 						<div class="inner-box">
 							<div class="author-info">
 								<div class="info-inner">
@@ -632,7 +637,7 @@
 							</div>
 							<div class="text">“Simply dummy text of the printing and typesetting text ever since the when an unknown printer took a galley of type and scrambled it to make a type but also the leap into electronic typesetting.”</div>
 						</div>
-					</div>
+					</div> -->
 				
 				</div>
 			</div>
@@ -648,7 +653,7 @@
 			<div class="row clearfix">
 				<marquee behavior="Scroll" direction="left">
 					{% for accreditation in accreditations %}
-					<img src="{{ accreditation.image.url }}" alt="">
+						<img src="{{ accreditation.image.url }}" alt="">
 					{% endfor %}
 				</marquee>
 			</div>
