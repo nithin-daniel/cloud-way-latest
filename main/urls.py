@@ -6,9 +6,9 @@ urlpatterns = [
     path('moments/',views.moments,name='moments'),
     path('service/',views.service,name='service'),
     path('contact/',views.contact,name='contact'),
-    path('service-details/<int:id>/',views.service_details,name='service_details'),
+    path('service-details/<uuid:id>/',views.service_details,name='service_details'),
     path('all-courses/',views.all_courses,name="all-courses"),
-    path('university-detail/<int:id>/',views.university_detail_page,name='university_detail_page'),
+    path('university-detail/<uuid:id>/',views.university_detail_page,name='university_detail_page'),
     path('ajax/load-universities/', views.load_univeristies, name='load_univeristies'), 
     path('ajax/load-courses/', views.load_courses, name='load_courses'), 
 ]

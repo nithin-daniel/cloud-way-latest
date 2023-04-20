@@ -1,7 +1,8 @@
 from django.db import models
-
+import uuid
 # Create your models here.
 class CeoMessage(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     content = models.TextField()
     ceo_name = models.CharField(max_length=100)
 
@@ -13,6 +14,7 @@ class CeoMessage(models.Model):
     
 
 class AboutCard(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=100)
     content = models.TextField()
     
@@ -24,6 +26,7 @@ class AboutCard(models.Model):
     
 
 class Moments(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=200)
     content = models.CharField(max_length=200)
     image = models.ImageField(upload_to='Moments/')
@@ -36,6 +39,7 @@ class Moments(models.Model):
     
     
 class ServicingCountries(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=100)
     content = models.CharField(max_length=100)
     image = models.ImageField(upload_to='servicing_countries')
@@ -54,6 +58,7 @@ class ServicingCountries(models.Model):
         return self.title
 
 class University(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     university_image = models.ImageField( upload_to='university_image')
     university_name = models.CharField(max_length=100)
     desciption = models.CharField(max_length=100)
@@ -82,6 +87,7 @@ class University(models.Model):
         return self.university_name
 
 class Service(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=50)
     content = models.TextField()
     icon_class_name = models.CharField(max_length=50)
@@ -93,6 +99,7 @@ class Service(models.Model):
         return self.title
 
 class CourseProvide(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=200)
     university = models.ForeignKey(University,on_delete=models.CASCADE,related_name='courses')
@@ -104,6 +111,7 @@ class CourseProvide(models.Model):
         return self.title
 
 class Contact(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     first_name = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
@@ -119,12 +127,14 @@ class Contact(models.Model):
         return f'{self.first_name} + {self.course}'
 
 class Accreditations(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     image = models.ImageField(upload_to='Accreditations/')
 
     class Meta:
         verbose_name_plural = 'Accreditations'
 
 class Testimonials(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     student_name = models.CharField(max_length=50)
     course_name_and_university = models.CharField(max_length=100)
     description = models.CharField(max_length=300)

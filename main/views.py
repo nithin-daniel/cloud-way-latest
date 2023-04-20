@@ -34,10 +34,10 @@ def moments(request):
     }
     return render(request,'main/moments.html',context)
 
-def service_details(request,id):
-    obj = ServicingCountries.objects.get(id=id)
+def service_details(request,pk):
+    obj = ServicingCountries.objects.get(id=pk)
     title = obj.title
-    university = University.objects.filter(university=id)
+    university = University.objects.filter(university=pk)
     servicing_countries = ServicingCountries.objects.all()
     my_list = list(servicing_countries)
     shuffle(my_list)
